@@ -1,0 +1,14 @@
+.gridcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 960px;
+    height: 960px;
+}
+
+.gridcontainer p{
+    background-color: azure;
+    padding: 10px;
+    margin: 1px;
+}
