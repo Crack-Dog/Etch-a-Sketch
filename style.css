@@ -1,14 +1,22 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .gridcontainer{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 960px;
-    height: 960px;
+    max-width: 960px;
+    max-height: 960px;
 }
 
 .gridcontainer p{
     background-color: azure;
-    padding: 10px;
-    margin: 1px;
+    padding: 16px;
+    margin: auto;
+    flex: 1;
+    aspect-ratio: 1;
 }

@@ -8,3 +8,8 @@ for (let i = 0; i <16; i++){
     sect.appendChild(sqdivs);
     }
 }
+
+const hoverevent = document.querySelector("p");
+hoverevent.addEventListener("mouseover", () => {
+    hoverevent.style.backgroundColor = "red";
+});
