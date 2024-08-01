@@ -1,42 +1,37 @@
 console.log("Hello");
 
-var gridLength = 0
+
+// Initialize initial grid
+var gridLength = 16
 createGrid(gridLength)
 
+
+// Function to create grid
 function createGrid(gridSize){
-    if (gridLength = 0){
-        for (let i = 0; i <16; i++){
-            for (let j = 0; j <16; j++){
-            const sect = document.querySelector(".gridcontainer");
-            const sqdivs = document.createElement("div");
-            sqdivs.classList.add('gridsq');
-            sqdivs.textContent = "Test";
-            sect.appendChild(sqdivs);
-            }
-        }
-    }
-    else{
-        for (let i = 0; i < gridSize; i++){
+
+    // Find dimension of square
+    const dimension = 100/gridSize + '%';
+
+    // Nested for loop to create grid depending on var gridLength
+    for (let i = 0; i < gridSize; i++){
             for (let j = 0; j < gridSize; j++){
-            const sect = document.querySelector(".gridcontainer");
+
+            // Create grid square element
+            const sect = document.querySelector("#gridcontainer");
             const sqdivs = document.createElement("div");
             sqdivs.classList.add('gridsq');
-            sqdivs.textContent = "Test";
-            sect.appendChild(sqdivs);
+            sqdivs.textContent = "";
+
+            // Sets size of each grid square
+            sqdivs.style.width = dimension;
+            sqdivs.style.height = dimension;
+
+            sect.appendChild(sqdivs); // Add created square to container
             }
         }
-    }
-}
-for (let i = 0; i <16; i++){
-    for (let j = 0; j <16; j++){
-    const sect = document.querySelector(".gridcontainer");
-    const sqdivs = document.createElement("div");
-    sqdivs.classList.add('gridsq');
-    sqdivs.textContent = "Test";
-    sect.appendChild(sqdivs);
-    }
 }
 
+// When mouse enters square, changes colour
 document.body.addEventListener("mouseover", event =>{
     if(event.target.classList.contains("gridsq")){
         event.target.style.background = "black";
@@ -44,6 +39,7 @@ document.body.addEventListener("mouseover", event =>{
     }
 })
 
+// When mouse leaves square, changes colour
 document.body.addEventListener("mouseout", event =>{
     if(event.target.classList.contains("gridsq")){
         event.target.style.background = "blue";
@@ -51,8 +47,7 @@ document.body.addEventListener("mouseout", event =>{
     }
 })
 
-var gridLength = 0
-
+// Create grid button functionality, asks for user input and sets it to gridLength
 const btn = document.querySelector("#btn")
 btn.addEventListener("click", () => {
     gridLength = prompt("Enter grid length (ex: 16 for 16x16");

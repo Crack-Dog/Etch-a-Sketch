@@ -1,25 +1,23 @@
 body {
+    background-color: lightblue;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-}
-
-.gridcontainer{
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 960px;
-    max-height: 960px;
+    gap: 1vw
 }
 
-.gridcontainer .gridsq{
+#gridcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    height: 800px;
+    border: 1px dashed black;
+}
+
+.gridsq{
     background-color: azure;
-    padding: 16px;
-    margin: auto;
-    flex: 1;
-    aspect-ratio: 1;
+    box-sizing: border-box;
+    flex: 1 1 auto;
 }
 
 button {
